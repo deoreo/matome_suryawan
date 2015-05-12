@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_fragment_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ManagerActivity$NotificationFragment">
+
+    <RelativeLayout
+        android:id="@+id/notification_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:visibility="visible"
+        android:clickable="true">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:background="@drawable/toast_border"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="end"
+            android:background="#ffffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Notification"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/notification_list_loader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:visibility="visible"/>
+
+            <ListView
+                android:id="@+id/notification_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:splitMotionEvents="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="3"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/notification_close"
+                android:layout_width="fill_parent"
+                android:layout_margin="15dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button"
+                android:text="Close"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

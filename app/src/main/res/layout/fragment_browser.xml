@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal|bottom"
+    tools:context=".ManagerActivity$BrowserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.jds.matomemobile.plugin.CustomWebView
+        android:id="@+id/matome_browser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

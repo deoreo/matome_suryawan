@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:paddingTop="6dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="TODO"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_toRightOf="@+id/img"
+                    android:text="Example application"
+                    android:textStyle="bold"
+                    android:textIsSelectable="false"
+                    android:textColor="#000"
+                    android:gravity="top"
+                    android:textSize="@dimen/list_title_font_size"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:ellipsize="end" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:layout_width="@dimen/ic_delete_x_list_size"
+                android:layout_height="@dimen/ic_delete_x_list_size"
+                android:id="@+id/deleteButon"
+                android:background="@mipmap/ic_delete"
+                android:layout_gravity="center"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

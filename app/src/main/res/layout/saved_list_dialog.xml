@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    android:alpha="0.8"
+    android:id="@+id/savedListDialogContainer">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:showDividers="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Saved Articles"
+            android:id="@+id/titleSaveDialog"
+            android:gravity="center_vertical"
+            android:layout_alignParentStart="true"
+            android:textColor="#000"
+            android:layout_weight="1"
+            android:textSize="@dimen/list_dialog_font_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/sizeArt"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="#000"
+                android:layout_gravity="right"
+                android:textSize="@dimen/list_dialog_font_size" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:background="@drawable/list_button"
+                android:layout_gravity="center|right"
+                android:padding="7dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/ic_delete_list_size"
+                    android:layout_height="@dimen/ic_delete_list_size"
+                    android:id="@+id/deleteAll"
+                    android:background="@mipmap/ic_delete_all"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center|right" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/savedListView"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Close"
+            android:id="@+id/savedListCloseButton"
+            android:background="@drawable/button"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/button_text_color" />
+    </LinearLayout>
+
+</LinearLayout>
